@@ -69,6 +69,13 @@ public final class Metronome {
     
     public init(audioFormat:AVAudioFormat) {
         
+        // Setup playback for bluetooth and silent mode on device
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
+        } catch let error {
+            print("Could not setup for bluetooth/silent mode: ", error.localizedDescription)
+        }
+        
         self.audioFormat = audioFormat
         self.bufferSampleRate = audioFormat.sampleRate
 
