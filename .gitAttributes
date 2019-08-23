@@ -1,0 +1,3 @@
+# https://roadfiresoftware.com/2015/09/automatically-resolving-git-merge-conflicts-in-xcodes-project-pbxproj/
+*.pbxproj merge=union
+
